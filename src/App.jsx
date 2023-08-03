@@ -61,6 +61,9 @@ export default function App() {
                   onChange={e => toggleTodo(todo.id, e.target.checked)} />
                 {todo.title}
               </label>
+              {/*in the line of code below we much use the parentheses before the arrow to
+              to ensure that it is calling the function first instead of just passing in the
+              result of calling 'deleteTodo(todo.id)' */}
               <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">
                 Delete
               </button>
