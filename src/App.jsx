@@ -49,7 +49,8 @@ export default function App() {
       </form>
       <h1 className="header">Todo List</h1>
       <ul className="list">
-        {/* the line of code below is called 'short circuiting' and it works if the length of todos is equal to 0 then it will render 'No Todos'
+        {/* the line of code below is called 'short circuiting' and it works if 
+        the length of todos is equal to 0 then it will render 'No Todos'
         */}
         {todos.length === 0 && 'No Todos'}
         {todos.map(todo => {
@@ -60,7 +61,9 @@ export default function App() {
                   onChange={e => toggleTodo(todo.id, e.target.checked)} />
                 {todo.title}
               </label>
-              <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">Delete</button>
+              <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">
+                Delete
+              </button>
             </li>
           )
         })}
