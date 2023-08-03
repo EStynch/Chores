@@ -49,6 +49,9 @@ export default function App() {
       </form>
       <h1 className="header">Todo List</h1>
       <ul className="list">
+        {/* the line of code below is called 'short circuiting' and it works if the length of todos is equal to 0 then it will render 'No Todos'
+        */}
+        {todos.length === 0 && 'No Todos'}
         {todos.map(todo => {
           return (
             <li key={todo.id}>
